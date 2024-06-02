@@ -1,0 +1,266 @@
+:root{
+    --primary-color: rgb(20, 20, 20);
+    --secondary-color: rgb(59, 57, 57);
+    --third-color: rgb(123, 123, 123);
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap');
+body{
+    background-color: black;
+    margin:0;
+    padding:0;
+}
+.box-1{
+    background-color: var(--primary-color);
+    height:200px;
+    width:300px;
+    border-radius: 20px;
+}
+.box-2{
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    height:600px;
+    width: 300px;
+    
+}
+
+.songList{
+    width:100%;
+    padding:0;
+    margin:0;
+    color: white;
+    font-family: "Flow Circular", system-ui;
+    font-weight: 500;
+    width:300px;
+}
+.songList li{
+    padding-top:5px;
+    margin: 10px 0px;
+    border: 1px white solid;
+    border-radius: 20px;
+
+}
+.songList ul li{
+    list-style-type: none;
+    display:Flex;
+    gap:10px;
+}
+.playbutton{
+    padding-top:10px;
+    padding-left:30px;
+}
+.box-2 p {
+    color:white;
+    font-family: "Flow Circular", system-ui;
+    padding-left: 100px;
+    font-size:20px;
+    font-weight:500;
+}
+.wrapper{
+    display:flex;
+    gap:10px;
+}
+.box-3{
+    background-color: var(--primary-color);
+    height:100%;
+    width:1040px;
+    border-radius: 20px;
+}
+.box-3 > h2{
+    font-family:"Flow Circular", system-ui; 
+    font-weight:600;
+    color:white;
+    padding-left:30px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.spotify-icon {
+    display: flex; /* Add flex display */
+    align-items: center; /* Center items vertically */
+    margin-top: 5px;
+    font-family: "Flow Circular", system-ui;
+    color: white;
+    font-weight: 500;
+}
+.home-icon{
+    display: flex; 
+    align-items: center; 
+    margin-top: 5px;
+    padding-left:5px;
+    opacity:0.5;
+
+}
+.search-icon{
+    display: flex; 
+    align-items: center; 
+    padding-left:5px;
+    opacity:0.5;
+}
+ .home-icon p {
+    padding-left: 15px; /* Adjust the value as needed */
+    color: white;
+    font-family: "Flow Circular", system-ui;
+    font-weight: 500;
+}
+.search-icon p{
+    padding-left: 15px; /* Adjust the value as needed */
+    color: white;
+    font-family: "Flow Circular", system-ui;
+    font-weight: 500;
+}
+.home-icon:hover{
+    color:white;
+    opacity:1;
+}
+.search-icon:hover{
+    color:white;
+    opacity:1;
+}
+.box > p{
+    font-size:15px;
+    color:white;
+}
+
+nav{
+    background-color: var(--secondary-color);
+    padding:0;
+    margin:0; 
+    height: 70px;
+    display:flex;
+    padding-top:10px;
+}
+nav .left{
+    color: white;
+    display:flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    list-style:none;
+}
+nav .right{
+    color: white;
+    display:flex;
+    justify-content: flex-end;
+    width: 90%; 
+    text-decoration: none;
+    list-style: none;
+    padding-right:10px;
+    
+}
+nav .login{
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-family: "Flow Circular", system-ui;
+    font-weight:500;
+    padding:5px 20px;
+}
+nav .signup{
+    color: gray;
+    font-family: "Flow Circular", system-ui;
+    margin-right: 30px;
+    padding:5px 20px;
+    font-weight:500;
+}
+.card{
+    margin-left: 50px;
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    gap:5px;
+}
+.card-1{
+    background-color: var(--secondary-color) ;
+    position:relative;
+    height: 280px;
+    width: 210px;
+    color:white;
+    display:grid;
+    gap:15px;
+}
+.card-1 h1{
+    position:absolute; 
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    top:180px;
+    left:5px;
+}
+.card-1 .thumbnail{
+    position:absolute; 
+    top:10px;
+    left:5px;
+}
+.card-1 .play{
+    position: absolute;
+    top:160px;
+    visibility: hidden;
+    left: 150px;
+
+}
+.card-1:hover{
+    background-color: var(--third-color) ;
+}
+.card-1:hover .play{
+    visibility: visible; 
+    transition: visibility 3s ease-in;
+}
+.playbar{
+    background-color: rgba(62, 55, 55, 0.5);
+    height:70px;
+    position: fixed;
+    bottom:10px;
+    background-color:opacity(0.9);
+    width:1040px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.playbar #next{
+    transform: scaleX(-1);
+}
+.playbar-icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.playbar-icons img{
+    cursor: pointer;
+
+}
+.seekbar{
+    height:1px;
+    width:98%;
+    background:  white;
+    position:absolute;
+    bottom:0;
+    border-radius: 20px;
+}
+.circle{
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    bottom:-10px;
+}
+
+.songinfo{
+    color: white;
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        gap:20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        gap:20px;
+
+    }
+}
